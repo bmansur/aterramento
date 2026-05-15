@@ -6,7 +6,7 @@
   <title>Planilha de Coleta</title>
 
   <style>
-        body{
+    body{
         font-family: Arial, sans-serif;
         background:#f1f3f4;
         padding:20px;
@@ -57,134 +57,40 @@
 </head>
 
 <body>
+    <h2>Dados de Entrada</h2>
 
-  <h2>Dados</h2>
-
-  <label>
-    Comprimento (m):
+  <label>Comprimento (m):
     <input type="number" id="comprimento" step="0.1">
   </label>
 
-  <label>
-    Largura (m):
-    <input type="number" id="largura" step="0.1">
+  <label>Diâmetro (polegadas):
+    <input type="number" id="diametro" step="0.1">
   </label>
 
-  <h2>Planilha de coleta</h2>
+  <label>Resistividade do solo:
+    <input type="number" id="resistividade" step="any">
+  </label>
 
-  <div class="planilha">
+  <label>Modelo de Aterramento:
+    <select id="modelo" onChange="mudarModelo()">
+      <option value="RT simples">RT – Eletrodo simples</option>
+      <option value="RT paralelo">RT equivalente de hastes paralelas igualmente espaçadas</option>
+      <option value="RT triangulo">RT de hastes dispostas em forma de triângulo</option>
+      <option value="RT quadrado vazio">RT de hastes em quadrado vazio</option>
+      <option value="RT quadrado cheio">RT de hastes em quadrado cheio</option>
+      <option value="RT circunferencia">RT de hastes dispostas em circunferência</option>
+      <option value="RT anel">RT de condutores enterrados horizontalmente, dispostos em forma de anel</option>
+    </select>
+  </label>
 
-    <!-- Cabeçalho -->
-    <div class="celula topo"></div>
-    <div class="celula topo">A</div>
-    <div class="celula topo">B</div>
-    <div class="celula topo">C</div>
-    <div class="celula topo">D</div>
-    <div class="celula topo">E</div>
-    <div class="celula topo">Resistividade média Ohm</div>
+  <label id="fatorReducaoLabel" style="{display: 'none'}">Fator de redução (K):
+    <input type="number" id="fatorReducao" step="any">
+  </label>
 
-    <!-- Linha 1 -->
-    <div class="celula linha">2</div>
-    <input class="celula editavel linha1">
-    <input class="celula editavel linha1">
-    <input class="celula editavel linha1">
-    <input class="celula editavel linha1">
-    <input class="celula editavel linha1">
-    <div class="celula resultado" id="media1">0</div>
+  <button onclick="calcular()">Calcular</button>
 
-    <!-- Linha 2 -->
-    <div class="celula linha">4</div>
-    <input class="celula editavel linha2">
-    <input class="celula editavel linha2">
-    <input class="celula editavel linha2">
-    <input class="celula editavel linha2">
-    <input class="celula editavel linha2">
-    <div class="celula resultado" id="media2">0</div>
-
-    <!-- Linha 3 -->
-    <div class="celula linha">8</div>
-    <input class="celula editavel linha3">
-    <input class="celula editavel linha3">
-    <input class="celula editavel linha3">
-    <input class="celula editavel linha3">
-    <input class="celula editavel linha3">
-    <div class="celula resultado" id="media3">0</div>
-
-    <!-- Linha 4 -->
-    <div class="celula linha">16</div>
-    <input class="celula editavel linha4">
-    <input class="celula editavel linha4">
-    <input class="celula editavel linha4">
-    <input class="celula editavel linha4">
-    <input class="celula editavel linha4">
-    <div class="celula resultado" id="media4">0</div>
-
-    <!-- Linha 5 -->
-    <div class="celula linha">32</div>
-    <input class="celula editavel linha5">
-    <input class="celula editavel linha5">
-    <input class="celula editavel linha5">
-    <input class="celula editavel linha5">
-    <input class="celula editavel linha5">
-    <div class="celula resultado" id="media5">0</div>
-
-  </div>
-
-  <h2>Gráfico</h2>
-
-  <canvas
-    id="grafico"
-    width="900"
-    height="400"
-    style="background:white; border:1px solid #ccc;">
-  </canvas>
-
-  <h2>Resultados</h2>
-
-  <div class="resultados">
-
-    <div class="resultado-item">
-      <label>p1:</label>
-      <h3 id="p1"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>p2:</label>
-      <h3 id="p2"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>K1:</label>
-      <h3 id="k1"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>pm:</label>
-      <h3 id="pm"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>Hm:</label>
-      <h3 id="hm"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>K2:</label>
-      <h3 id="k2"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>K3:</label>
-      <h3 id="k3"></h3>
-    </div>
-
-    <div class="resultado-item">
-      <label>pa:</label>
-      <h3 id="pa"></h3>
-    </div>
-
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./script.js"></script>
+  <h3 id="resultado"></h3>
+  
+  <script src="./exercicio1.js"></script>
 </body>
 </html>
