@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planilha de Coleta</title>
 
+  <style>
+        body{
+        font-family: Arial, sans-serif;
+        background:#f1f3f4;
+        padding:20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .planilha{
+        display:grid;
+        grid-template-columns: 50px repeat(6,120px);
+        width:max-content;
+        border:1px solid #ccc;
+        background:white;
+    }
+
+    .celula{
+        border:1px solid #e0e0e0;
+        min-height:35px;
+        padding:8px;
+        outline:none;
+        box-sizing:border-box;
+    }
+
+    .topo,
+    .linha{
+        background:#f8f9fa;
+        font-weight:bold;
+        text-align:center;
+    }
+
+    .editavel{
+        background:white;
+    }
+
+    .editavel:focus{
+        border:2px solid #1a73e8;
+        background:#e8f0fe;
+    }
+
+    .resultado{
+        background:#f1f8e9;
+        font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Dados</h2>
+
+  <label>
+    Comprimento (m):
+    <input type="number" id="comprimento" step="0.1">
+  </label>
+
+  <label>
+    Largura (m):
+    <input type="number" id="largura" step="0.1">
+  </label>
+
+  <h2>Planilha de coleta</h2>
+
+  <div class="planilha">
+
+    <!-- Cabeçalho -->
+    <div class="celula topo"></div>
+    <div class="celula topo">A</div>
+    <div class="celula topo">B</div>
+    <div class="celula topo">C</div>
+    <div class="celula topo">D</div>
+    <div class="celula topo">E</div>
+    <div class="celula topo">Resistividade média Ohm</div>
+
+    <!-- Linha 1 -->
+    <div class="celula linha">2</div>
+    <input class="celula editavel linha1">
+    <input class="celula editavel linha1">
+    <input class="celula editavel linha1">
+    <input class="celula editavel linha1">
+    <input class="celula editavel linha1">
+    <div class="celula resultado" id="media1">0</div>
+
+    <!-- Linha 2 -->
+    <div class="celula linha">4</div>
+    <input class="celula editavel linha2">
+    <input class="celula editavel linha2">
+    <input class="celula editavel linha2">
+    <input class="celula editavel linha2">
+    <input class="celula editavel linha2">
+    <div class="celula resultado" id="media2">0</div>
+
+    <!-- Linha 3 -->
+    <div class="celula linha">8</div>
+    <input class="celula editavel linha3">
+    <input class="celula editavel linha3">
+    <input class="celula editavel linha3">
+    <input class="celula editavel linha3">
+    <input class="celula editavel linha3">
+    <div class="celula resultado" id="media3">0</div>
+
+    <!-- Linha 4 -->
+    <div class="celula linha">16</div>
+    <input class="celula editavel linha4">
+    <input class="celula editavel linha4">
+    <input class="celula editavel linha4">
+    <input class="celula editavel linha4">
+    <input class="celula editavel linha4">
+    <div class="celula resultado" id="media4">0</div>
+
+    <!-- Linha 5 -->
+    <div class="celula linha">32</div>
+    <input class="celula editavel linha5">
+    <input class="celula editavel linha5">
+    <input class="celula editavel linha5">
+    <input class="celula editavel linha5">
+    <input class="celula editavel linha5">
+    <div class="celula resultado" id="media5">0</div>
+
+  </div>
+
+  <h2>Gráfico</h2>
+
+  <canvas
+    id="grafico"
+    width="900"
+    height="400"
+    style="background:white; border:1px solid #ccc;">
+  </canvas>
+
+  <h2>Resultados</h2>
+
+  <div class="resultados">
+
+    <div class="resultado-item">
+      <label>p1:</label>
+      <h3 id="p1"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>p2:</label>
+      <h3 id="p2"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>K1:</label>
+      <h3 id="k1"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>pm:</label>
+      <h3 id="pm"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>Hm:</label>
+      <h3 id="hm"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>K2:</label>
+      <h3 id="k2"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>K3:</label>
+      <h3 id="k3"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>pa:</label>
+      <h3 id="pa"></h3>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
