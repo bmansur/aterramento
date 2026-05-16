@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 3</title>
 
+  <style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f1f3f4;
+        padding:20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .resultado{
+        background:#f1f8e9;
+        font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Dados</h2>
+
+  <label>
+    Comprimento (m):
+    <input type="number" id="comprimento" step="0.1">
+  </label>
+
+  <label>
+    Largura (m):
+    <input type="number" id="largura" step="0.1">
+  </label>
+
+  <h2>Resultados</h2>
+
+  <div class="resultados">
+
+    <div class="resultado-item">
+      <label>p1:</label>
+      <h3 id="p1"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>p2:</label>
+      <h3 id="p2"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>K1:</label>
+      <h3 id="k1"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>pm:</label>
+      <h3 id="pm"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>Hm:</label>
+      <h3 id="hm"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>K2:</label>
+      <h3 id="k2"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>K3:</label>
+      <h3 id="k3"></h3>
+    </div>
+
+    <div class="resultado-item">
+      <label>pa:</label>
+      <h3 id="pa"></h3>
+    </div>
+    
+    <div class="resultado-item">
+      <label>L (comprimento total de cabos da malha):</label>
+      <h3 id="l"></h3>
+    </div>
+
+  </div>
+  <script src="./exercicio3.js"></script>
+</body>
+</html>
