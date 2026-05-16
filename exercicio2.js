@@ -589,8 +589,12 @@ function desenharGrafico(){
     document.getElementById("k3").innerText = k3.toFixed(4);
   
     pa = k3 * valorMaximo;
-  
+
     document.getElementById("pa").innerText = pa.toFixed(2);
+
+    const l = pa/(5-0.443*(pa/Math.sqrt(area)));
+
+    document.getElementById("l").innerText = l.toFixed(2);
 }
 
 desenharGrafico();
