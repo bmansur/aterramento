@@ -48,15 +48,16 @@ function calcular() {
   const itmcb = (1000*ete)/(1000+1.5*(p1+ps));
   const ia = ((1000+1.5*ps)*9*lcm)/(1000*kmp*kip*p1);
 
-  document.getElementById("lc").innerText = lc.toFixed(0);
-  document.getElementById("epa").innerText = epa.toFixed(0);
-  document.getElementById("eper").innerText = eper.toFixed(0);
-  document.getElementById("etm").innerText = etm.toFixed(0);
-  document.getElementById("ete").innerText = ete.toFixed(0);
-  document.getElementById("ich").innerText = ich.toFixed(0);
-  document.getElementById("ipmsb").innerText = ipmsb.toFixed(0);
-  document.getElementById("ipmcb").innerText = ipmcb.toFixed(0);
-  document.getElementById("itmsb").innerText = itmsb.toFixed(0);
-  document.getElementById("itmcb").innerText = itmcb.toFixed(0);
-  document.getElementById("ia").innerText = ia.toFixed(0);
+  
+  document.getElementById("lc").innerText = `${lc.toFixed(0)} m`;
+  document.getElementById("epa").innerText = `${epa.toFixed(0) V`;
+  document.getElementById("eper").innerText = `${eper.toFixed(0) V`;
+  document.getElementById("etm").innerText = `${etm.toFixed(0) V`;
+  document.getElementById("ete").innerText = `${ete.toFixed(0) V`;
+  document.getElementById("ich").innerText = `${ich.toFixed(0) A`;
+  document.getElementById("ipmsb").innerText = `${ipmsb.toFixed(0) A`;
+  document.getElementById("ipmcb").innerText = `${ipmcb.toFixed(0) A`;
+  document.getElementById("itmsb").innerText = `${itmsb.toFixed(0) A`;
+  document.getElementById("itmcb").innerText = `${itmcb.toFixed(0) A`;
+  document.getElementById("ia").innerText = `${ia.toFixed(0) A`;
 }
