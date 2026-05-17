@@ -35,6 +35,7 @@ function calcular() {
   document.getElementById("kip").innerText = kip.toFixed(0);
   document.getElementById("kij").innerText = kij.toFixed(0);
 
+  const ps = 3000;
   const lc = (kmp*kij*pa*icf*Math.sqrt(tf))/(0.116+0.174*3000);
   const epa = 116+0.7*3000/Math.sqrt(tf);
   const eper = (ksp*kip*p1*icf)/lcm;
