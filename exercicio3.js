@@ -3,10 +3,37 @@ function calcular() {
   const dc = parseFloat(document.getElementById("dc").value);
   const largura = parseFloat(document.getElementById("largura").value);
   const dl = parseFloat(document.getElementById("dl").value);
+  const h = parseFloat(document.getElementById("h").value);
+  const icf = parseFloat(document.getElementById("icf").value);
+  const pa = parseFloat(document.getElementById("pa").value);
+  const tf = parseFloat(document.getElementById("tf").value);
+  const p1 = parseFloat(document.getElementById("p1").value);
 
   const ncp = Math.ceil(comprimento/dl + 1);
   const ncj = Math.ceil(largura/dc + 1);
+  const lcm = 1.05*((comprimento*ncj)+(largura*ncp))
 
-  document.getElementById("ncp").innerText = ncp;
-  document.getElementById("ncj").innerText = ncj;
+  document.getElementById("ncp").innerText = ncp.toFixed(0);
+  document.getElementById("ncj").innerText = ncj.toFixed(0);
+
+  const kmp = 1/(2*Math.PI)*Math.log(dl**2/(4*Math.PI*(ncp-1)*h*0.01433));
+  const kmj = 1/(2*Math.PI)*Math.log(dc**2/(4*Math.PI*(ncj-1)*h*0.01433));
+
+  const ksp = (1/Math.PI)*((1/(2*h))+1/(dl+h)+Math.log(0.655*(ncp-1)-0.328)/dl);
+  const ksj = (1/Math.PI)*((1/(2*h))+1/(dc+h)+Math.log(0.655*(ncj-1)-0.328)/dc);
+
+  const kip = 0.65 + 0.172 * ncp;
+  const kij = 0.65 + 0.172 * ncj;
+
+  const lc = (kmp*kij*pa*icf*Math.sqrt(tf))/(0.116+0.174*3000);
+  const epa = 116+0.7*3000/Math.sqrt(tf);
+  const eper = (ksp*kip*p1*icf)/lcm;
+  const etm = 116+0.174*ps/Math.sqrt(tf);
+  const ete = (kmp*kip*p1*icf)/lcm;
+  const ich = 116/math.sqrt(0.5);
+  const ipmsb = (1000*eper)/(1000+6*p1);
+  const ipmcb = (1000*eper)/(1000+6*(p1+ps));
+  const itmsb = (1000*ete)/(1000+1.5*p1);
+  const itmcb = (1000*ete)/(1000+1.5*(p1+ps));
+  const ia = ((1000+1.5*ps)*9*lcm)/(1000*kmp*kip*p1);
 }
