@@ -7,6 +7,6 @@ function calcular() {
   const ncp = Math.ceil(comprimento/dl + 1);
   const ncj = Math.ceil(largura/dc + 1);
 
-  document.getElementById("ncp").innerText = ncp.toFixed(2);
-  document.getElementById("ncj").innerText = ncj.toFixed(2);
+  document.getElementById("ncp").innerText = ncp;
+  document.getElementById("ncj").innerText = ncj;
 }
