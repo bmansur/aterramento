@@ -15,7 +15,7 @@ function calcular() {
 
   document.getElementById("ncp").innerText = ncp.toFixed(0);
   document.getElementById("ncj").innerText = ncj.toFixed(0);
-  document.getElementById("lcm").innerText = ncj.toFixed(0);
+  document.getElementById("lcm").innerText = `${lcm.toFixed(0) m`;
 
   const kmp = 1/(2*Math.PI)*Math.log(dl**2/(4*Math.PI*(ncp-1)*h*0.01433));
   const kmj = 1/(2*Math.PI)*Math.log(dc**2/(4*Math.PI*(ncj-1)*h*0.01433));
