@@ -4,8 +4,8 @@ function calcular() {
   const largura = parseFloat(document.getElementById("largura").value);
   const dl = parseFloat(document.getElementById("dl").value);
 
-  const ncp = comprimento/dl + 1;
-  const ncj = largura/dc + 1;
+  const ncp = Math.ceil(comprimento/dl + 1);
+  const ncj = Math.ceil(largura/dc + 1);
 
   document.getElementById("ncp").innerText = ncp.toFixed(2);
   document.getElementById("ncj").innerText = ncj.toFixed(2);
