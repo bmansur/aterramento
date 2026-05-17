@@ -15,7 +15,7 @@ function calcular() {
 
   document.getElementById("ncp").innerText = ncp.toFixed(0);
   document.getElementById("ncj").innerText = ncj.toFixed(0);
-  document.getElementById("lcm").innerText = `${lcm.toFixed(0) m`;
+  document.getElementById("lcm").innerText = `${lcm.toFixed(0)} m`;
 
   const kmp = 1/(2*Math.PI)*Math.log(dl**2/(4*Math.PI*(ncp-1)*h*0.01433));
   const kmj = 1/(2*Math.PI)*Math.log(dc**2/(4*Math.PI*(ncj-1)*h*0.01433));
@@ -50,14 +50,14 @@ function calcular() {
 
   
   document.getElementById("lc").innerText = `${lc.toFixed(0)} m`;
-  document.getElementById("epa").innerText = `${epa.toFixed(0) V`;
-  document.getElementById("eper").innerText = `${eper.toFixed(0) V`;
-  document.getElementById("etm").innerText = `${etm.toFixed(0) V`;
-  document.getElementById("ete").innerText = `${ete.toFixed(0) V`;
-  document.getElementById("ich").innerText = `${ich.toFixed(0) A`;
-  document.getElementById("ipmsb").innerText = `${ipmsb.toFixed(0) A`;
-  document.getElementById("ipmcb").innerText = `${ipmcb.toFixed(0) A`;
-  document.getElementById("itmsb").innerText = `${itmsb.toFixed(0) A`;
-  document.getElementById("itmcb").innerText = `${itmcb.toFixed(0) A`;
-  document.getElementById("ia").innerText = `${ia.toFixed(0) A`;
+  document.getElementById("epa").innerText = `${epa.toFixed(0)} V`;
+  document.getElementById("eper").innerText = `${eper.toFixed(0)} V`;
+  document.getElementById("etm").innerText = `${etm.toFixed(0)} V`;
+  document.getElementById("ete").innerText = `${ete.toFixed(0)} V`;
+  document.getElementById("ich").innerText = `${ich.toFixed(0)} A`;
+  document.getElementById("ipmsb").innerText = `${ipmsb.toFixed(0)} A`;
+  document.getElementById("ipmcb").innerText = `${ipmcb.toFixed(0)} A`;
+  document.getElementById("itmsb").innerText = `${itmsb.toFixed(0)} A`;
+  document.getElementById("itmcb").innerText = `${itmcb.toFixed(0)} A`;
+  document.getElementById("ia").innerText = `${ia.toFixed(0)} A`;
 }
