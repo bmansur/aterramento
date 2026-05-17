@@ -48,6 +48,31 @@
     <input type="number" id="dl" step="0.1">
   </label>
 
+  <label>
+    Profundidade considerada da malha de terra (m):
+    <input type="number" id="h" step="0.1">
+  </label>
+
+  <label>
+    Corrente de curto-circuito fase-terra:
+    <input type="number" id="icf" step="0.1">
+  </label>
+
+  <label>
+    Resistividade aparente do solo:
+    <input type="number" id="pa" step="0.1">
+  </label>
+
+  <label>
+    Tempo de duração da corrente de curto circuito fase-terra:
+    <input type="number" id="tf" step="0.1">
+  </label>
+
+  <label>
+    Resistividade da camada superior do solo:
+    <input type="number" id="p1" step="0.1">
+  </label>
+  
   <button onclick="calcular()">Calcular</button>
 
   <h2>Resultados</h2>
@@ -61,6 +86,74 @@
     <label>
       Número de condutores de junção:
       <h3 id="ncj"></h3>
+    </label>
+    <label>
+      Comprimento dos condutores da malha de terra:
+      <h3 id="lcm"></h3>
+    </label>
+    <label>
+      Coeficiente de malha principal:
+      <h3 id="kmp"></h3>
+    </label>
+    <label>
+      Coeficiente de malha de junção:
+      <h3 id="kmj"></h3>
+    </label>
+    <label>
+      Coeficiente de superficie principal:
+      <h3 id="ksp"></h3>
+    </label>
+    <label>
+      Coeficiente de superficie de junção:
+      <h3 id="ksj"></h3>
+    </label>
+    <label>
+      Coeficiente de irregularidade principal:
+      <h3 id="kip"></h3>
+    </label>
+    <label>
+      Coeficiente de irregularidade de junção:
+      <h3 id="kij"></h3>
+    </label>
+    <label>
+      Comprimento mínimo do condutor da malha:
+      <h3 id="lc"></h3>
+    </label>
+    <label>
+      Tensão de passo:
+      <h3 id="epa"></h3>
+    </label>
+    <label>
+      Tensão de passo na periferia:
+      <h3 id="eper"></h3>
+    </label>
+    <label>
+      Tensão máxima de toque:
+      <h3 id="etm"></h3>
+    </label>
+    <label>
+      Tensão de toque existente:
+      <h3 id="ete"></h3>
+    </label>
+    <label>
+      Corrente máxima de choque:
+      <h3 id="ich"></h3>
+    </label>
+    <label>
+      Corrente de choque devido a tensão de passo sem brita na periferia da malha:
+      <h3 id="ipmsb"></h3>
+    </label>
+    <label>
+      Corrente de choque devido a tensão de passo com brita na periferia da malha:
+      <h3 id="ipmcb"></h3>
+    </label>
+    <label>
+      Corrente de choque devido a tensão de toque sem brita na periferia da malha:
+      <h3 id="itmsb"></h3>
+    </label>
+    <label>
+      Corrente mínima de acionamento do relé de terra:
+      <h3 id="ia"></h3>
     </label>
   </div>
   <script src="./exercicio3.js"></script>
