@@ -41,7 +41,7 @@ function calcular() {
   const eper = (ksp*kip*p1*icf)/lcm;
   const etm = 116+0.174*ps/Math.sqrt(tf);
   const ete = (kmp*kip*p1*icf)/lcm;
-  const ich = 116/math.sqrt(0.5);
+  const ich = 116/Math.sqrt(0.5);
   const ipmsb = (1000*eper)/(1000+6*p1);
   const ipmcb = (1000*eper)/(1000+6*(p1+ps));
   const itmsb = (1000*ete)/(1000+1.5*p1);
