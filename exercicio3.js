@@ -20,20 +20,20 @@ function calcular() {
   const kmp = 1/(2*Math.PI)*Math.log(dl**2/(4*Math.PI*(ncp-1)*h*0.01433));
   const kmj = 1/(2*Math.PI)*Math.log(dc**2/(4*Math.PI*(ncj-1)*h*0.01433));
 
-  document.getElementById("kmp").innerText = kmp.toFixed(0);
-  document.getElementById("kmj").innerText = kmj.toFixed(0);
+  document.getElementById("kmp").innerText = kmp.toFixed(3);
+  document.getElementById("kmj").innerText = kmj.toFixed(3);
   
   const ksp = (1/Math.PI)*((1/(2*h))+1/(dl+h)+Math.log(0.655*(ncp-1)-0.328)/dl);
   const ksj = (1/Math.PI)*((1/(2*h))+1/(dc+h)+Math.log(0.655*(ncj-1)-0.328)/dc);
 
-  document.getElementById("ksp").innerText = ksp.toFixed(0);
-  document.getElementById("ksj").innerText = ksj.toFixed(0);
+  document.getElementById("ksp").innerText = ksp.toFixed(3);
+  document.getElementById("ksj").innerText = ksj.toFixed(3);
 
   const kip = 0.65 + 0.172 * ncp;
   const kij = 0.65 + 0.172 * ncj;
 
-  document.getElementById("kip").innerText = kip.toFixed(0);
-  document.getElementById("kij").innerText = kij.toFixed(0);
+  document.getElementById("kip").innerText = kip.toFixed(3);
+  document.getElementById("kij").innerText = kij.toFixed(3);
 
   const ps = 3000;
   const lc = (kmp*kij*pa*icf*Math.sqrt(tf))/(0.116+0.174*3000);
@@ -49,15 +49,15 @@ function calcular() {
   const ia = ((1000+1.5*ps)*9*lcm)/(1000*kmp*kip*p1);
 
   
-  document.getElementById("lc").innerText = `${lc.toFixed(0)} m`;
-  document.getElementById("epa").innerText = `${epa.toFixed(0)} V`;
-  document.getElementById("eper").innerText = `${eper.toFixed(0)} V`;
-  document.getElementById("etm").innerText = `${etm.toFixed(0)} V`;
-  document.getElementById("ete").innerText = `${ete.toFixed(0)} V`;
-  document.getElementById("ich").innerText = `${ich.toFixed(0)} A`;
-  document.getElementById("ipmsb").innerText = `${ipmsb.toFixed(0)} A`;
-  document.getElementById("ipmcb").innerText = `${ipmcb.toFixed(0)} A`;
-  document.getElementById("itmsb").innerText = `${itmsb.toFixed(0)} A`;
-  document.getElementById("itmcb").innerText = `${itmcb.toFixed(0)} A`;
-  document.getElementById("ia").innerText = `${ia.toFixed(0)} A`;
+  document.getElementById("lc").innerText = `${lc.toFixed(1)} m`;
+  document.getElementById("epa").innerText = `${epa.toFixed(1)} V`;
+  document.getElementById("eper").innerText = `${eper.toFixed(1)} V`;
+  document.getElementById("etm").innerText = `${etm.toFixed(1)} V`;
+  document.getElementById("ete").innerText = `${ete.toFixed(1)} V`;
+  document.getElementById("ich").innerText = `${ich.toFixed(1)} A`;
+  document.getElementById("ipmsb").innerText = `${ipmsb.toFixed(1)} A`;
+  document.getElementById("ipmcb").innerText = `${ipmcb.toFixed(1)} A`;
+  document.getElementById("itmsb").innerText = `${itmsb.toFixed(1)} A`;
+  document.getElementById("itmcb").innerText = `${itmcb.toFixed(1)} A`;
+  document.getElementById("ia").innerText = `${ia.toFixed(1)} A`;
 }
